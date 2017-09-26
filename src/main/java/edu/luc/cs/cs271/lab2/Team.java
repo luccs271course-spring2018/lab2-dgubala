@@ -16,10 +16,18 @@ public class Team {
     if (name == null) {
       throw new IllegalArgumentException("name is null");
     }
-    // TODO validity checking for headcoach
-    // TODO validity checking for funding
+    // DONE validity checking for headcoach
+    if (headcoach == null) {
+      throw new IllegalArgumentException("headcoach is null");
+    }
+    // DONE validity checking for funding
+    if (funding == -1) {
+      throw new IllegalArgumentException("funding is null");
+    }
     this.name = name;
-    // TODO complete this constructor
+    // DONE complete this constructor
+    this.headcoach = headcoach;
+    this.funding = funding;
   }
 
   /** Returns the team's name. */
@@ -29,13 +37,13 @@ public class Team {
 
   /** Returns the team's head coach. */
   public String getHeadcoach() {
-    // TODO complete this method
-    return null;
+    // DONE complete this method
+    return this.headcoach;
   }
 
   /** Returns the team's funding level. */
   public int getFunding() {
-    // TODO complete this method
-    return -1;
+    // DONE complete this method
+    return this.funding;
   }
 }
